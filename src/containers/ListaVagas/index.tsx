@@ -1,10 +1,7 @@
 import { useState } from 'react'
 import FormVagas from '../../components/FormVagas'
-
 import Vaga from '../../components/Vaga'
-
 import styles from './ListaVagas.module.css'
-
 type Vaga = {
   id: string
   titulo: string
@@ -15,7 +12,6 @@ type Vaga = {
   salarioMax: number
   requisitos: string[]
 }
-
 const vagas = [
   {
     id: 1,
@@ -88,14 +84,12 @@ const vagas = [
     requisitos: ['HTML', 'CSS', 'JavaScript', 'jQuery']
   }
 ]
-
 const ListaVagas = () => {
   const [filtro, setFiltro] = useState<string>('')
 
   const vagasFiltradas = vagas.filter(
     (x) => x.titulo.toLocaleLowerCase().search(filtro) >= 0
   )
-
   return (
     <div>
       <FormVagas aoPesquisar={(termo: string) => setFiltro(termo)} />
@@ -116,5 +110,4 @@ const ListaVagas = () => {
     </div>
   )
 }
-
 export default ListaVagas

@@ -1,5 +1,4 @@
 import styles from './Hero.module.css'
-
 const Hero = () => (
   <form className={styles.form}>
     <div className="container">
@@ -9,5 +8,4 @@ const Hero = () => (
     </div>
   </form>
 )
-
 export default Hero
